@@ -1,0 +1,19 @@
+@keyframes rotating-asteroid {
+  from {
+    transform: rotate(0);
+    right: 0;
+  }
+
+  to {
+    transform: rotate(360deg);
+    right: 100%;
+  }
+}
+
+.asteroid {
+  max-width: 120px;
+  position: absolute;
+  animation-name: rotating-asteroid;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
