@@ -9,6 +9,13 @@ const Asteroid = function (imageIndex, top, speed = 12) {
     newAsteroid.style.animationDuration = speed + 's';
     newAsteroid.src = 'assets/asteroid_' + imageIndex + '.png';
 
+    newAsteroid.addEventListener('animationiteration', function (e) {
+      console.log("end-->", e.target);
+      const newSpeed = 12 + Math.ceil( Math.random()*8 );
+      e.target.style.animationDuration = newSpeed + 's';
+      console.log("newspeed-->", e.target);
+    });
+
     return newAsteroid;
   };
 

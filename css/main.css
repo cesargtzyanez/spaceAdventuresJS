@@ -1,12 +1,12 @@
 @keyframes rotating-asteroid {
   from {
     transform: rotate(0);
-    right: 0;
+    left: 1000px;
   }
 
   to {
     transform: rotate(360deg);
-    right: 100%;
+    left: 0;
   }
 }
 
